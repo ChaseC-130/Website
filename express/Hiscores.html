@@ -13,9 +13,9 @@
 
   <!-- Navigation -->
   <nav class="w3-bar w3-black">
-    <a href="" class="w3-button w3-bar-item">Home</a>
-    <a href="/DotA.html" class="w3-button w3-bar-item">DotA Players</a>
-    <a href="/Hiscores.html" class="w3-button w3-bar-item">Onslaught Hiscores</a>
+    <a href="./index.html" class="w3-button w3-bar-item">Home</a>
+    <a href="./DotA.html" class="w3-button w3-bar-item">DotA Players</a>
+    <a href="" class="w3-button w3-bar-item">Onslaught Hiscores</a>
     <a href="https://discord.gg/2Cz7jCf" class="w3-button w3-bar-item">Discord</a>
   </nav>
 
@@ -23,19 +23,23 @@
   <section class="w3-center w3-light-grey">
     <i class="background"></i>
     <div class="centered">
-    <h2>Welcome to Team Googolflex</h2>
+    <h1>Onslaught Hiscores</h1>
+    <p>Top 10 players</p>
 
-    <p2>
-      We are a collaborative Gaming community encompassing a large variety of genres.
-      If you find yourself in need of friends to game with, or just want a social and relaxed
-      gaming community feel free to visit our Discord!
-
-      Thanks for visiting!
-
-      -Team Googolflex
-    </p2>
+    <table id = "myTable">
+      <thead></thead>
+        <col style="width:25%">
+        <col style="width:25%">
+        <col style="width:25%">
+        <col style="width:25%">
+        <th>Rank</th><th>Player</th><th>Highest Wave</th><th>Hero</th>
+      </thead>
+      <tbody id="board"></tbody>
+  </table>
     <link rel ="stylesheet" type="text/css" href="./table.css">
 
+
+    <script type="text/javascript" src="./script.js"></script>
   </div>
 </section>
 </html>

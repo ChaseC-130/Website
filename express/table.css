@@ -47,6 +47,12 @@
     font-size: 150%
  }
 
+ h2 {
+  color: white;
+  font-family: courier;
+  font-size: 250%
+}
+
  table {
     color: whitesmoke;
     font-family: courier;
@@ -64,10 +70,16 @@
     font-size: 125%
  }
 
+ p2 {
+  color: white;
+  font-family: courier;
+  font-size: 150%
+}
+
+
 body {
   background-image: url('imgs/wc3.png');
   background-size: cover;
-
 }
 
 

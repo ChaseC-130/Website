@@ -17,6 +17,7 @@ player9 = new Player("Smol pp", "electro", 26),
 player10 = new Player("Johnson", "cow", 26),
 
 
+
 Players = [player1, player2, player3, player4, player5, player6, player7, player8, player9, player10]
 
 
