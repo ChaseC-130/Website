@@ -55,7 +55,7 @@
 
 #myTable {
     border-collapse: separate;
-    border-spacing: 20px;
+    border-spacing: 1vw;
 }
 
  p {
@@ -66,9 +66,8 @@
 
 body {
   background-image: url('imgs/wc3.png');
-  background-repeat: no-repeat;
-  background-size: 100vw 100vw;
-  background-repeat: no-repeat;
+  background-size: cover;
+
 }
 
 
