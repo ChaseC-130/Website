@@ -64,6 +64,13 @@
     font-size: 125%
  }
 
+body {
+  background-image: url('imgs/wc3.png');
+  background-repeat: no-repeat;
+  background-size: 100vw 100vw;
+  background-repeat: no-repeat;
+}
+
 
 .cow {
     background: url('imgs/cow.png');
