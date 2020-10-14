@@ -1,0 +1,162 @@
+/* Container holding the image and the text */
+.container {
+    position: relative;
+    text-align: center;
+    color: white;
+  }
+  
+  /* Bottom left text */
+  .bottom-left {
+    position: absolute;
+    bottom: 8px;
+    left: 16px;
+  }
+  
+  /* Top left text */
+  .top-left {
+    position: absolute;
+    top: 8px;
+    left: 16px;
+  }
+  
+  /* Top right text */
+  .top-right {
+    position: absolute;
+    top: 8px;
+    right: 16px;
+  }
+  
+  /* Bottom right text */
+  .bottom-right {
+    position: absolute;
+    bottom: 8px;
+    right: 16px;
+  }
+  
+  /* Centered text */
+  .centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  
+  @media only screen and (max-width: 760px) {
+  .centered {margin-top: 30vw;}
+}
+
+ h1 {
+    color: white;
+    font-family: courier;
+    font-size: 150%
+ }
+
+ h2 {
+  margin-top: 5vw;
+  color: white;
+  font-family: courier;
+  font-size: 225%
+}
+
+ table {
+    color: whitesmoke;
+    font-family: courier;
+    font-size: 100%
+ }
+
+#myTable {
+    border-collapse: separate;
+    border-spacing: 0.5vw;
+}
+
+ p {
+    color: white;
+    font-family: courier;
+    font-size: 125%
+ }
+
+ p2 {
+  color: white;
+  font-family: courier;
+  font-size: 150%
+}
+
+
+body {
+  background-image: url('imgs/wc3.png');
+  background-size: cover;
+}
+
+
+.cow {
+    background: url('imgs/cow.png');
+    margin-left: auto;
+    margin-right: auto;
+    height: 50px;
+    width: 50px;
+    display: block;
+}
+
+.electro {
+    background: url('imgs/electro.png');
+    margin-left: auto;
+    margin-right: auto;
+    height: 50px;
+    width: 50px;
+    display: block;
+}
+
+.war {
+    background: url('imgs/war.png');
+    margin-left: auto;
+    margin-right: auto;
+    height: 50px;
+    width: 50px;
+    display: block;
+}
+
+.vengeful {
+    background: url('imgs/vengeful.png');
+    margin-left: auto;
+    margin-right: auto;
+    height: 50px;
+    width: 50px;
+    display: block;
+}
+
+.toxino {
+    background: url('imgs/toxino.png');
+    margin-left: auto;
+    margin-right: auto;
+    height: 50px;
+    width: 50px;
+    display: block;
+}
+
+.sinful {
+    background: url('imgs/sinful.png');
+    margin-left: auto;
+    margin-right: auto;
+    height: 50px;
+    width: 50px;
+    display: block;
+}
+
+.collector {
+    background: url('imgs/collector.png');
+    margin-left: auto;
+    margin-right: auto;
+    height: 50px;
+    width: 50px;
+    display: block;
+}
+
+.gier {
+    background: url('imgs/gier.png');
+    margin-left: auto;
+    margin-right: auto;
+    height: 50px;
+    width: 50px;
+    display: block;
+}
