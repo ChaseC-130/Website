@@ -48,6 +48,7 @@
  }
 
  h2 {
+  margin-top: 5vw;
   color: white;
   font-family: courier;
   font-size: 250%
@@ -61,7 +62,7 @@
 
 #myTable {
     border-collapse: separate;
-    border-spacing: 1vw;
+    border-spacing: 0.5vw;
 }
 
  p {
