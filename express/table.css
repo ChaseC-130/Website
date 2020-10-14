@@ -35,13 +35,16 @@
   
   /* Centered text */
   .centered {
-    @media only screen and (max-width: 760px) 
-      margin-top: 25vw;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
   }
+
+  
+  @media only screen and (max-width: 760px) {
+  .centered {margin-top: 25vw;}
+}
 
  h1 {
     color: white;
