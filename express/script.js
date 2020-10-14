@@ -27,6 +27,9 @@ function displayLeaderboard() {
     Players.sort((aPlayer, bPlayer) => bPlayer.score - aPlayer.score);
     Players.forEach((player) => theExport += '<tr><td>' + i++ + '</td><td>' + player.name + '</td><td>' + player.score + '</td><td>' + '<i class=' + player.hero + '></i>' + "</td></tr>");
     document.getElementById("board").innerHTML = theExport; 
+    if (window.matchMedia("only screen and (max-width: 760px)").matches && i == 10) {
+        theExport += "\n";
+    }
 }
 
 displayLeaderboard();
