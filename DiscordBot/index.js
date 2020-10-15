@@ -1,4 +1,3 @@
-require('dotenv').config();
 const wget = require('node-wget-promise');
 const fs = require('fs');
 const Discord = require('discord.js');
