@@ -1,48 +1,51 @@
 require('dotenv').config();
-var AWS = require('aws-sdk');
+const wget = require('node-wget-promise');
 const fs = require('fs');
 const Discord = require('discord.js');
 const { type } = require('os');
 const client = new Discord.Client();
 
 var path = require('path');
-
-var s3 = new AWS.S3();
-
-
-const uploadFile = (fileName) => {
-  const fileContent = fs.readFileSync(fileName);
-
-  const params = {
-    Bucket: "s3.us-east-1.amazonaws.com/onslaughtleaderboards",
-    Key: 'stats.txt',
-    Body: fileContent
-  };
-
-  s3.upload(params, function(err, data) {
-    if (err) {
-      throw err;
-    }
-
-    console.log(`Uploaded file successfully. ${data.Location}`);
-  });
-};
-
-
-uploadFile("stats.txt")
+const { url, waitForDebugger } = require('inspector');
+const { SSL_OP_EPHEMERAL_RSA } = require('constants');
 
 
 client.on('ready', () => {
   console.log(`Logged in as ${client.user.tag}!`);
 });
 
+
 client.on('message', msg => {
   if (msg.content === '!upload') {
-    msg.reply("Your stats have been successfully uploaded!");   
-    
+    if (msg.attachments.first().url.indexOf("stats.txt") !== -1) {
+      msg.reply("Your stats have successfully been uploaded!");
+      wget(msg.attachments.first().url);
+      
+    }
+    else {
+      msg.reply("Try attaching the 'stats.txt' file from \nC:\\Users\\\\%USERPROFILE%\\Documents\\Warcraft III\\CustomMapData\\Onslaught");
+    }
+    leaderBoardUpdate();
   }
-}
-);
 
-const TOKEN = process.env.TOKEN;
-client.login(TOKEN);
+      
+if (msg.content === '!help') {
+  msg.reply("Hi! Please visit our webpage for a full list of my commands!\n https://teamgoogolflex.com/commands");
+}
+});
+
+
+function leaderBoardUpdate() {
+  var w = fs.createWriteStream('hiscores.txt', {flags: 'a'});
+  var r = fs.createReadStream('stats.txt');
+
+  w.on('close', function() {
+    console.log("Updated Scores");
+  });
+
+
+  
+  r.pipe(w);
+}
+
+client.login('NzY1NzI2MjkyOTI2NTI5NTc2.X4ZALg.v8NokrFiLBVOtoeuUcC_KYbhCIY');

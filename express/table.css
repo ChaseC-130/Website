@@ -82,6 +82,12 @@
   font-size: 150%
 }
 
+p3 {
+  color: white;
+  font-family: courier;
+  font-size: 100%
+}
+
 
 body {
   background-image: url('imgs/wc3.png');
@@ -89,7 +95,7 @@ body {
 }
 
 
-.cow {
+.Cow {
     background: url('imgs/cow.png');
     margin-left: auto;
     margin-right: auto;
@@ -98,7 +104,7 @@ body {
     display: block;
 }
 
-.electro {
+.Ele {
     background: url('imgs/electro.png');
     margin-left: auto;
     margin-right: auto;
@@ -107,7 +113,7 @@ body {
     display: block;
 }
 
-.war {
+.War {
     background: url('imgs/war.png');
     margin-left: auto;
     margin-right: auto;
@@ -116,7 +122,7 @@ body {
     display: block;
 }
 
-.vengeful {
+.Ven {
     background: url('imgs/vengeful.png');
     margin-left: auto;
     margin-right: auto;
@@ -125,7 +131,7 @@ body {
     display: block;
 }
 
-.toxino {
+.Tox {
     background: url('imgs/toxino.png');
     margin-left: auto;
     margin-right: auto;
@@ -134,7 +140,7 @@ body {
     display: block;
 }
 
-.sinful {
+.Sin {
     background: url('imgs/sinful.png');
     margin-left: auto;
     margin-right: auto;
@@ -143,7 +149,7 @@ body {
     display: block;
 }
 
-.collector {
+.Col {
     background: url('imgs/collector.png');
     margin-left: auto;
     margin-right: auto;
@@ -152,11 +158,74 @@ body {
     display: block;
 }
 
-.gier {
+.Gie {
     background: url('imgs/gier.png');
     margin-left: auto;
     margin-right: auto;
     height: 50px;
     width: 50px;
     display: block;
+}
+
+.Ili {
+  background: url('imgs/illidan.png');
+  margin-left: auto;
+  margin-right: auto;
+  height: 50px;
+  width: 50px;
+  display: block;
+}
+
+.Dra {
+  background: url('imgs/dragon.png');
+  margin-left: auto;
+  margin-right: auto;
+  height: 50px;
+  width: 50px;
+  display: block;
+}
+
+.Ten {
+  background: url('imgs/tentacle.png');
+  margin-left: auto;
+  margin-right: auto;
+  height: 50px;
+  width: 50px;
+  display: block;
+}
+
+.Tan {
+  background: url('imgs/tank.png');
+  margin-left: auto;
+  margin-right: auto;
+  height: 50px;
+  width: 50px;
+  display: block;
+}
+
+.Cry {
+  background: url('imgs/cry.png');
+  margin-left: auto;
+  margin-right: auto;
+  height: 50px;
+  width: 50px;
+  display: block;
+}
+
+.Pri {
+  background: url('imgs/priestess.png');
+  margin-left: auto;
+  margin-right: auto;
+  height: 50px;
+  width: 50px;
+  display: block;
+}
+
+.Arc {
+  background: url('imgs/arcanist.png');
+  margin-left: auto;
+  margin-right: auto;
+  height: 50px;
+  width: 50px;
+  display: block;
 }
