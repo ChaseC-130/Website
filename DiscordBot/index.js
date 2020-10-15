@@ -8,6 +8,7 @@ const client = new Discord.Client();
 var path = require('path');
 const { url, waitForDebugger } = require('inspector');
 const { SSL_OP_EPHEMERAL_RSA } = require('constants');
+const { createCipher } = require('crypto');
 
 
 client.on('ready', () => {
@@ -17,6 +18,7 @@ client.on('ready', () => {
 
 client.on('message', msg => {
   if (msg.content === '!upload') {
+    try {
     if (msg.attachments.first().url.indexOf("stats.txt") !== -1) {
       msg.reply("Your stats have successfully been uploaded!");
       wget(msg.attachments.first().url);
@@ -25,6 +27,10 @@ client.on('message', msg => {
     else {
       msg.reply("Try attaching the 'stats.txt' file from \nC:\\Users\\\\%USERPROFILE%\\Documents\\Warcraft III\\CustomMapData\\Onslaught");
     }
+  } catch(error) {
+    msg.reply("Try attaching the 'stats.txt' file from \nC:\\Users\\\\%USERPROFILE%\\Documents\\Warcraft III\\CustomMapData\\Onslaught");
+  }
+  
     leaderBoardUpdate();
   }
 
