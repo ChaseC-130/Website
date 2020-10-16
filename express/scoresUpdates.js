@@ -6,7 +6,7 @@ const months = ["January", "February", "March", "April", "May", "June",
 "July", "August", "September", "October", "November", "December"
 ];
 
-var job = new CronJob('* * * * * *', function() {
+var job = new CronJob('*/5 * * * *', function() {
 var path = ("../DiscordBot/hiscores.txt");
 try {
     if (fs.existsSync(path)) {
