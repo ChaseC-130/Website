@@ -39,26 +39,42 @@ for (i = 0; i < hexCodes.length; i++) {
 
 
 // Grab current leaders in a String for comparison with new uploads
+//var leaderFile = fs.readFileSync("./currentLeaders.json").toString('utf-8');
 var leaderFile = fs.readFileSync("./currentLeaders.json").toString('utf-8');
-var mydata = JSON.parse(leaderFile);
+var leaders = JSON.parse(leaderFile);
+AllPlayers = JSON.stringify(AllPlayers);
 
+var complete = leaders.concat(JSON.parse(AllPlayers));
 
-Array.prototype.push.apply(mydata,AllPlayers);
-
-
-
-mydata.sort(function(a, b) {
+complete.sort(function(a, b) {
     return b.round - a.round;
 });
 
+var array = complete;
+var seenNames = {};
 
-finalWrite = ""
-for (i = 0; i < 10; i++) {
-    finalWrite += JSON.stringify(mydata[i]);
+allHeroes = ["Gua", "Rul", "Sin", "The", "Ayu", "Cry", "Lig", "Arc", "Dem", "Dra", "Gre", "Mas", "Pur", "Pre", "Ven"]
+
+array = array.filter(function(currentObject) {
+    if (currentObject.name in seenNames || currentObject.round > 100 || !allHeroes.includes(currentObject.hero)) {
+        return false;
+    } else {
+        seenNames[currentObject.name] = true;
+        return true;
+    }
+});
+
+console.log(array);
+
+var done = [];
+for (i = 0; i < array.length; i++) {
+    if (i < 10) {
+        done[i] = array[i];
+    }
 }
 
-fs.writeFileSync("./currentLeaders.json", finalWrite);
-fs.unlinkSync(path);
+fs.writeFileSync("./currentLeaders.json", JSON.stringify(done));
+//fs.unlinkSync(path);
 
 
     } 
@@ -98,5 +114,7 @@ function Player(data) {
     this.hero = getHeroName(data);
     this.round = getRoundNumber(data);
 }
+
+
 
 job.start();
